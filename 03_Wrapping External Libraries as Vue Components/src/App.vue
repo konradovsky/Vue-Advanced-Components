@@ -4,7 +4,7 @@
       <div class="card">
         <label class="block">
           <span class="form-label mb-2">Select a date</span>
-          <input :value="date" class="form-input" type="text" id="datepicker" placeholder="YYYY-MM-DD">
+          <date-picker v-model="date"/>
         </label>
       </div>
     </div>
@@ -12,25 +12,18 @@
 </template>
 
 <script>
-import Pikaday from 'pikaday';
-import 'pikaday/css/pikaday.css'
+import DatePicker from './components/DatePicker'
 export default {
   data(){
     return {
-      date: '2019-02-26'
+      date: '2019-02-21'
     }
   },
-  mounted(){
-    const picker = new Pikaday({
-      field: document.getElementById('datepicker'),
-      format: "YYYY MM DD",
-      onSelect: () => {
-        this.date = picker.toString()
-      }
-    })
-  }
+  components: {
+    DatePicker
+  },
 
 }
 </script>
 
-<style src="./assets/app.css"/>
+<style/>
