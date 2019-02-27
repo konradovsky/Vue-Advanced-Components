@@ -4,7 +4,7 @@
       <div class="card">
         <label class="block">
           <span class="form-label mb-2">Select a date</span>
-          <date-picker v-model="date" format="DD-MM-YYYY" :option="{firstDay: 1}"/>
+          <date-picker v-model="date" format="DD-MM-YYYY" :options="{firstDay: 1}"/>
         </label>
       </div>
     </div>
