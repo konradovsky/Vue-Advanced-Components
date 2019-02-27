@@ -19,6 +19,13 @@
 <script>
 export default {
   props: ["show"],
+  created(){
+    document.addEventListener('keydown',  e => {
+      if(e.key === 'Escape' && this.show){
+        this.dismiss()
+      }
+    })
+  },
   methods: {
     dismiss() {
       this.$emit("close")
